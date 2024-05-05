@@ -27,6 +27,7 @@ class MainActivity : ComponentActivity() {
         initComponents()
 
         sayHelloTextView.text = "Hello World!"
+        sayHelloTextView.text = "${nameEditText.text}!"
 
         sayHelloButton.setOnClickListener {
             val name = nameEditText.text.toString()
