@@ -2,6 +2,7 @@ package com.example.belajar_android
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -27,9 +28,14 @@ class MainActivity : ComponentActivity() {
         initComponents()
 
         sayHelloTextView.text = "Hello World!"
-        sayHelloTextView.text = "${nameEditText.text}!"
 
         sayHelloButton.setOnClickListener {
+
+            Log.d("PZN", "This is debug log")
+            Log.i("PZN", "This is info log")
+            Log.w("PZN", "This is warn log")
+            Log.e("PZN", "This is error log")
+
             val name = nameEditText.text.toString()
             sayHelloTextView.text = "Hello $name!"
         }
