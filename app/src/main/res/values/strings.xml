@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Belajar Android</string>
+    <string name="length">Panjang\t</string>
+    <string name="width">Lebar</string>
+    <string name="height">Tinggi</string>
+    <string name="calculate">Hitung</string>
+    <string name="result">Hasil</string>
+    <string name="move_activity">Pindah Activity</string>
+</resources>
