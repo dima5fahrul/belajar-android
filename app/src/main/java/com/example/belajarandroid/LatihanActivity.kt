@@ -1,31 +1,40 @@
+package com.example.belajarandroid
+
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import com.example.belajarandroid.R
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 
-class Activity : AppCompatActivity(), View.OnClickListener {
+class LatihanActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var editWidth: EditText
     private lateinit var editHeight: EditText
     private lateinit var editLength: EditText
     private lateinit var btnCalculate: Button
     private lateinit var tvResult: TextView
 
+    companion object {
+        private const val STATE_RESULT = "state_result"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_latihan)
         editWidth = findViewById(R.id.edit_width)
         editHeight = findViewById(R.id.edit_height)
         editLength = findViewById(R.id.edit_length)
         btnCalculate = findViewById(R.id.btn_calculate)
         tvResult = findViewById(R.id.tv_result)
         btnCalculate.setOnClickListener(this)
-
-        if (savedInstanceState != null) {
-            val result = savedInstanceState.getString(STATE_RESULT)
-            tvResult.text = result
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
         }
     }
 
@@ -56,14 +65,5 @@ class Activity : AppCompatActivity(), View.OnClickListener {
                 tvResult.text = volume.toString()
             }
         }
-    }
-
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        outState.putString(STATE_RESULT, tvResult.text.toString())
-    }
-
-    companion object {
-        private const val STATE_RESULT = "state_result"
     }
 }
