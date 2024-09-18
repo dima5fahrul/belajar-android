@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Belajar Android</string>
+    <string name="latihan_activity">Activity</string>
+    <string name="latihan_intent">Intent</string>
     <string name="length">Panjang\t</string>
     <string name="width">Lebar</string>
     <string name="height">Tinggi</string>

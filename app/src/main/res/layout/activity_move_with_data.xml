@@ -6,13 +6,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".MainActivity">
+    tools:context=".MoveWithDataActivity">
 
-    <Button
-        android:id="@+id/btn_move_activity"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/move_activity"/>
-
+        android:id="@+id/tv_data_received"
+        android:text="@string/data_received" />
 </LinearLayout>

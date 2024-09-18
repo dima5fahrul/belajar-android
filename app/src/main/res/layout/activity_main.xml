@@ -5,65 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".Activity">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/length" />
-
-    <EditText
-        android:id="@+id/edit_length"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:importantForAutofill="no"
-        android:inputType="numberDecimal"
-        android:lines="1"
-        tools:ignore="LabelFor" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/width" />
-
-    <EditText
-        android:id="@+id/edit_width"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:importantForAutofill="no"
-        android:inputType="numberDecimal"
-        android:lines="1"
-        tools:ignore="LabelFor" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/height" />
-
-    <EditText
-        android:id="@+id/edit_height"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:importantForAutofill="no"
-        android:inputType="numberDecimal"
-        android:lines="1"
-        tools:ignore="LabelFor" />
+    android:paddingVertical="42dp"
+    android:paddingHorizontal="24dp"
+    tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btn_calculate"
+        android:id="@+id/btn_move_latihan_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/calculate" />
+        android:layout_marginBottom="10dp"
+        android:text="@string/latihan_activity" />
 
-    <TextView
-        android:id="@+id/tv_result"
+    <Button
+        android:id="@+id/btn_move_latihan_intent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/result"
-        android:gravity="center"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-
+        android:layout_marginBottom="16dp"
+        android:text="@string/latihan_intent" />
+    
 </LinearLayout>

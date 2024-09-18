@@ -25,13 +25,14 @@ class LatihanActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_latihan)
+
         editWidth = findViewById(R.id.edit_width)
         editHeight = findViewById(R.id.edit_height)
         editLength = findViewById(R.id.edit_length)
         btnCalculate = findViewById(R.id.btn_calculate)
         tvResult = findViewById(R.id.tv_result)
         btnCalculate.setOnClickListener(this)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.latihan_activity)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
