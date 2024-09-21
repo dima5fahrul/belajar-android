@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity() {
         val btnMoveLatihanIntent: Button = findViewById(R.id.btn_move_latihan_intent)
         val btnMoveLatihanViewAndViewGroup: Button =
             findViewById(R.id.btn_move_latihan_views_and_view_group)
+        val btnMoveLatihanStyleAndTheme: Button =
+            findViewById(R.id.btn_move_latihan_style_and_theme)
 
         btnMoveLatihanActivity.setOnClickListener {
             startActivity(Intent(this@MainActivity, LatihanActivity::class.java))
