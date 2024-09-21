@@ -33,7 +33,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/view_and_view_group"
-        android:id="@+id/btn_move_latihan_style_and_theme" />
+        android:text="@string/recycle_view"
+        android:id="@+id/btn_move_latihan_recycle_view" />
 
 </LinearLayout>
