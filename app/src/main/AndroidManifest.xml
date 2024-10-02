@@ -19,9 +19,6 @@
             android:name=".LatihanRecycleView"
             android:exported="false" />
         <activity
-            android:name=".RecycleView"
-            android:exported="false" />
-        <activity
             android:name=".ConstraintLayout"
             android:exported="false" />
         <activity
