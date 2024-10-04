@@ -13,6 +13,21 @@
         android:theme="@style/Theme.LatihanActivity"
         tools:targetApi="31">
         <activity
+            android:name=".MenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OptionMenuAppBar"
+            android:exported="false" />
+        <activity
+            android:name=".NavigationGraph"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivityNavigation"
+            android:exported="false" />
+        <activity
+            android:name=".LatihanNavigation"
+            android:exported="false" />
+        <activity
             android:name=".LatihanFragment"
             android:exported="false" />
         <activity

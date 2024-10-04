@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         val btnMoveLatihanRecycleView: Button =
             findViewById(R.id.btn_move_latihan_recycle_view)
         val btnMoveLatihanFragment: Button = findViewById(R.id.btn_move_latihan_fragment)
+        val btnMoveLatihanNavigation: Button = findViewById(R.id.btn_move_latihan_navigation)
 
         btnMoveLatihanActivity.setOnClickListener {
             startActivity(Intent(this@MainActivity, LatihanActivity::class.java))
@@ -38,6 +39,10 @@ class MainActivity : AppCompatActivity() {
 
         btnMoveLatihanFragment.setOnClickListener {
             startActivity(Intent(this@MainActivity, LatihanFragment::class.java))
+        }
+
+        btnMoveLatihanNavigation.setOnClickListener {
+            startActivity(Intent(this@MainActivity, LatihanNavigation::class.java))
         }
     }
 }

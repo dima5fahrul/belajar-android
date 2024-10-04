@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragmentNavigation">
+
+    <fragment
+        android:id="@+id/homeFragmentNavigation"
+        android:name="com.example.belajarandroid.HomeFragmentNavigation"
+        android:label="fragment_home_navigation"
+        tools:layout="@layout/fragment_home_navigation">
+        <action
+            android:id="@+id/action_homeFragmentNavigation_to_categoryFragmentNavigation"
+            app:destination="@id/categoryFragmentNavigation"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_homeFragmentNavigation_to_profileActivityNavigation"
+            app:destination="@id/profileActivityNavigation"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragmentNavigation"
+        android:name="com.example.belajarandroid.CategoryFragmentNavigation"
+        android:label="fragment_category_navigation"
+        tools:layout="@layout/fragment_category_navigation">
+        <action
+            android:id="@+id/action_categoryFragmentNavigation_to_detailCategoryFragmentNavigation"
+            app:destination="@id/detailCategoryFragmentNavigation" />
+    </fragment>
+    <activity
+        android:id="@+id/profileActivityNavigation"
+        android:name="com.example.belajarandroid.ProfileActivityNavigation"
+        android:label="activity_profile_navigation"
+        tools:layout="@layout/activity_profile_navigation" />
+    <fragment
+        android:id="@+id/detailCategoryFragmentNavigation"
+        android:name="com.example.belajarandroid.DetailCategoryFragmentNavigation"
+        android:label="fragment_detail_category_navigation"
+        tools:layout="@layout/fragment_detail_category_navigation">
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="default_name" />
+        <argument
+            android:name="stock"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <action
+            android:id="@+id/action_detailCategoryFragmentNavigation_to_homeFragmentNavigation"
+            app:destination="@id/homeFragmentNavigation"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/homeFragmentNavigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

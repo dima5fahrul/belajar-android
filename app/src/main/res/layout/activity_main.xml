@@ -44,4 +44,11 @@
         android:layout_marginBottom="8dp"
         android:text="@string/fragment" />
 
+    <Button
+        android:id="@+id/btn_move_latihan_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/navigation" />
+
 </LinearLayout>
