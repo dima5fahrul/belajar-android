@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
             findViewById(R.id.btn_move_latihan_recycle_view)
         val btnMoveLatihanFragment: Button = findViewById(R.id.btn_move_latihan_fragment)
         val btnMoveLatihanNavigation: Button = findViewById(R.id.btn_move_latihan_navigation)
+        val btnMoveLatihanAsyncBackgroundThread: Button =
+            findViewById(R.id.btn_move_latihan_async_background_thread)
 
         btnMoveLatihanActivity.setOnClickListener {
             startActivity(Intent(this@MainActivity, LatihanActivity::class.java))
@@ -43,6 +45,15 @@ class MainActivity : AppCompatActivity() {
 
         btnMoveLatihanNavigation.setOnClickListener {
             startActivity(Intent(this@MainActivity, LatihanNavigation::class.java))
+        }
+
+        btnMoveLatihanAsyncBackgroundThread.setOnClickListener {
+            startActivity(
+                Intent(
+                    this@MainActivity,
+                    LatihanAsynchronousBackgroundThread::class.java
+                )
+            )
         }
     }
 }
