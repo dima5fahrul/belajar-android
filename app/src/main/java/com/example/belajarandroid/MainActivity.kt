@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
         val btnMoveLatihanAsyncBackgroundThread: Button =
             findViewById(R.id.btn_move_latihan_async_background_thread)
         val btnMoveLatihanNetworking: Button = findViewById(R.id.btn_move_latihan_networking)
+        val btnMoveLatihanViewModel: Button = findViewById(R.id.btn_move_latihan_view_model)
+        val btnMoveLatihanLiveData: Button = findViewById(R.id.btn_move_latihan_live_data)
 
         btnMoveLatihanActivity.setOnClickListener {
             startActivity(Intent(this@MainActivity, LatihanActivity::class.java))
@@ -59,6 +61,14 @@ class MainActivity : AppCompatActivity() {
 
         btnMoveLatihanNetworking.setOnClickListener {
             startActivity(Intent(this@MainActivity, LatihanNetworkingLoopJParsingJSON::class.java))
+        }
+
+        btnMoveLatihanViewModel.setOnClickListener {
+            startActivity((Intent(this@MainActivity, LatihanViewModel::class.java)))
+        }
+
+        btnMoveLatihanLiveData.setOnClickListener {
+            startActivity((Intent(this@MainActivity, LatihanLiveData::class.java)))
         }
     }
 }

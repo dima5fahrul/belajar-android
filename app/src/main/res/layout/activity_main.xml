@@ -65,4 +65,18 @@
         android:layout_marginBottom="8dp"
         android:text="@string/networking_loopj_parsing_json" />
 
+    <Button
+        android:id="@+id/btn_move_latihan_view_model"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/view_model" />
+
+    <Button
+        android:id="@+id/btn_move_latihan_live_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/live_data" />
+
 </LinearLayout>

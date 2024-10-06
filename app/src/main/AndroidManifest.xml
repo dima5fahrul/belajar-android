@@ -16,6 +16,12 @@
         android:theme="@style/Theme.LatihanActivity"
         tools:targetApi="31">
         <activity
+            android:name=".LatihanLiveData"
+            android:exported="false" />
+        <activity
+            android:name=".LatihanViewModel"
+            android:exported="false" />
+        <activity
             android:name=".ListQuotesActivity"
             android:exported="false" />
         <activity

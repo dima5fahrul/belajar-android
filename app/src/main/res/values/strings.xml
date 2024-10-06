@@ -194,4 +194,8 @@
     <string name="author">- Dr. Hiluluk</string>
     <string name="show_list_quotes">Show me list of quotes</string>
     <string name="networking_loopj_parsing_json">Networking LoopJ Parsing JSON</string>
+    <string name="view_model">View Model</string>
+    <string name="seconds">%d seconds elapsed</string>
+    <string name="hello_dicoding">Hello Dicoding!</string>
+    <string name="live_data">Live Data</string>
 </resources>
