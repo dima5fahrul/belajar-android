@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         val btnMoveLatihanNavigation: Button = findViewById(R.id.btn_move_latihan_navigation)
         val btnMoveLatihanAsyncBackgroundThread: Button =
             findViewById(R.id.btn_move_latihan_async_background_thread)
+        val btnMoveLatihanNetworking: Button = findViewById(R.id.btn_move_latihan_networking)
 
         btnMoveLatihanActivity.setOnClickListener {
             startActivity(Intent(this@MainActivity, LatihanActivity::class.java))
@@ -54,6 +55,10 @@ class MainActivity : AppCompatActivity() {
                     LatihanAsynchronousBackgroundThread::class.java
                 )
             )
+        }
+
+        btnMoveLatihanNetworking.setOnClickListener {
+            startActivity(Intent(this@MainActivity, LatihanNetworkingLoopJParsingJSON::class.java))
         }
     }
 }
