@@ -66,6 +66,13 @@
         android:text="@string/networking_loopj_parsing_json" />
 
     <Button
+        android:id="@+id/btn_move_latihan_networking_retrofit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/networking_retrofit_api" />
+
+    <Button
         android:id="@+id/btn_move_latihan_view_model"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

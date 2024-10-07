@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.example.belajarandroid.ui.LatihanNetworkingRetrofit
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +24,8 @@ class MainActivity : AppCompatActivity() {
         val btnMoveLatihanAsyncBackgroundThread: Button =
             findViewById(R.id.btn_move_latihan_async_background_thread)
         val btnMoveLatihanNetworking: Button = findViewById(R.id.btn_move_latihan_networking)
+        val btnMoveLatihanNetworkingRetrofit: Button =
+            findViewById(R.id.btn_move_latihan_networking_retrofit)
         val btnMoveLatihanViewModel: Button = findViewById(R.id.btn_move_latihan_view_model)
         val btnMoveLatihanLiveData: Button = findViewById(R.id.btn_move_latihan_live_data)
 
@@ -61,6 +64,10 @@ class MainActivity : AppCompatActivity() {
 
         btnMoveLatihanNetworking.setOnClickListener {
             startActivity(Intent(this@MainActivity, LatihanNetworkingLoopJParsingJSON::class.java))
+        }
+
+        btnMoveLatihanNetworkingRetrofit.setOnClickListener {
+            startActivity(Intent(this@MainActivity, LatihanNetworkingRetrofit::class.java))
         }
 
         btnMoveLatihanViewModel.setOnClickListener {
