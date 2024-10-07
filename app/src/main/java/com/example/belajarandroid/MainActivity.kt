@@ -5,7 +5,17 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import com.example.belajarandroid.ui.LatihanNetworkingRetrofit
+import com.example.belajarandroid.activity.LatihanActivity
+import com.example.belajarandroid.async_background_thread.LatihanAsynchronousBackgroundThread
+import com.example.belajarandroid.fragment.LatihanFragment
+import com.example.belajarandroid.intent.LatihanIntent
+import com.example.belajarandroid.live_data.LatihanLiveData
+import com.example.belajarandroid.navigation.LatihanNavigation
+import com.example.belajarandroid.networking_loopj_parsing_json.LatihanNetworkingLoopJParsingJSON
+import com.example.belajarandroid.networking_retrofit_api.ui.LatihanNetworkingRetrofit
+import com.example.belajarandroid.recycle_view.LatihanRecycleView
+import com.example.belajarandroid.view_model.LatihanViewModel
+import com.example.belajarandroid.views_and_view_group.LatihanViewsAndViewGroup
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

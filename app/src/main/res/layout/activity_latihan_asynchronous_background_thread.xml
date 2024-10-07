@@ -4,7 +4,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".LatihanAsynchronousBackgroundThread">
+    tools:context=".async_background_thread.LatihanAsynchronousBackgroundThread">
 
     <LinearLayout
         android:layout_width="match_parent"

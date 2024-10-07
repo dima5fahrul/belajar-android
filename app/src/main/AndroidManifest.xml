@@ -16,73 +16,73 @@
         android:theme="@style/Theme.LatihanActivity"
         tools:targetApi="31">
         <activity
-            android:name=".ui.LatihanNetworkingRetrofit"
+            android:name=".networking_retrofit_api.ui.LatihanNetworkingRetrofit"
             android:exported="false" />
         <activity
-            android:name=".LatihanLiveDataAPI"
+            android:name=".live_data.LatihanLiveDataAPI"
             android:exported="false" />
         <activity
-            android:name=".LatihanLiveData"
+            android:name=".live_data.LatihanLiveData"
             android:exported="false" />
         <activity
-            android:name=".LatihanViewModel"
+            android:name=".view_model.LatihanViewModel"
             android:exported="false" />
         <activity
-            android:name=".ListQuotesActivity"
+            android:name=".networking_loopj_parsing_json.ListQuotesActivity"
             android:exported="false" />
         <activity
-            android:name=".LatihanNetworkingLoopJParsingJSON"
+            android:name=".networking_loopj_parsing_json.LatihanNetworkingLoopJParsingJSON"
             android:exported="false" />
         <activity
-            android:name=".LatihanAsynchronousBackgroundThread"
+            android:name=".async_background_thread.LatihanAsynchronousBackgroundThread"
             android:exported="false" />
         <activity
             android:name=".MenuActivity"
             android:exported="false" />
         <activity
-            android:name=".OptionMenuAppBar"
+            android:name=".navigation.option_menu_bar.OptionMenuAppBar"
             android:exported="false" />
         <activity
-            android:name=".NavigationGraph"
+            android:name=".navigation.navigation_graph.NavigationGraph"
             android:exported="false" />
         <activity
             android:name=".ProfileActivityNavigation"
             android:exported="false" />
         <activity
-            android:name=".LatihanNavigation"
+            android:name=".navigation.LatihanNavigation"
             android:exported="false" />
         <activity
-            android:name=".LatihanFragment"
+            android:name=".fragment.LatihanFragment"
             android:exported="false" />
         <activity
-            android:name=".LatihanRecycleView"
+            android:name=".recycle_view.LatihanRecycleView"
             android:exported="false" />
         <activity
-            android:name=".ConstraintLayout"
+            android:name=".views_and_view_group.ConstraintLayout"
             android:exported="false" />
         <activity
-            android:name=".LinearRealtiveFrameAndTableLayout"
+            android:name=".views_and_view_group.LinearRealtiveFrameAndTableLayout"
             android:exported="false" />
         <activity
-            android:name=".LatihanViewsAndViewGroup"
+            android:name=".views_and_view_group.LatihanViewsAndViewGroup"
             android:exported="false" />
         <activity
-            android:name=".MoveForResultActivity"
+            android:name=".intent.MoveForResultActivity"
             android:exported="false" />
         <activity
-            android:name=".MoveWithObjectActivity"
+            android:name=".intent.MoveWithObjectActivity"
             android:exported="false" />
         <activity
-            android:name=".MoveWithDataActivity"
+            android:name=".intent.MoveWithDataActivity"
             android:exported="false" />
         <activity
-            android:name=".LatihanIntent"
+            android:name=".intent.LatihanIntent"
             android:exported="false" />
         <activity
-            android:name=".LatihanActivity"
+            android:name=".activity.LatihanActivity"
             android:exported="false" />
         <activity
-            android:name=".MoveActivity"
+            android:name=".intent.MoveActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

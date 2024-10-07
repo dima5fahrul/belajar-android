@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".LatihanViewsAndViewGroup">
+    tools:context=".views_and_view_group.LatihanViewsAndViewGroup">
 
     <Button
         android:id="@+id/btn_move_to_linear_relative_frame_table_layout"
@@ -19,5 +19,5 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn_move_to_constraint_layout"
         android:text="@string/constraint_layout" />
-    
+
 </LinearLayout>
