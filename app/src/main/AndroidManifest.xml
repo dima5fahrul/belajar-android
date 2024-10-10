@@ -16,6 +16,15 @@
         android:theme="@style/Theme.LatihanActivity"
         tools:targetApi="31">
         <activity
+            android:name=".local_data_persistent.data_sqlite.NoteAddUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".local_data_persistent.data_sqlite.DataSQLite"
+            android:exported="false" />
+        <activity
+            android:name=".local_data_persistent.preferences_data_store.PreferencesDataStore"
+            android:exported="false" />
+        <activity
             android:name=".local_data_persistent.setting_shared_preferences.SharedPreferenceSettings"
             android:exported="false" />
         <activity

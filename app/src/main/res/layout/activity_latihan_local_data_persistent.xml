@@ -22,4 +22,18 @@
         android:layout_marginBottom="8dp"
         android:text="@string/shared_preferences_setting" />
 
+    <Button
+        android:id="@+id/btn_preferences_data_store"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/preferences_data_store" />
+
+    <Button
+        android:id="@+id/btn_data_sqlite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/data_sqlite" />
+
 </LinearLayout>

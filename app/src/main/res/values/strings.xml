@@ -226,4 +226,10 @@
     <string name="key_phone">phone</string>
     <string name="key_love">love</string>
     <string name="key_name">name</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="preferences_data_store">Preferences Data Store</string>
+    <string name="date">Date</string>
+    <string name="submit">Submit</string>
+    <string name="delete">Delete</string>
+    <string name="data_sqlite">Data SQLite</string>
 </resources>
