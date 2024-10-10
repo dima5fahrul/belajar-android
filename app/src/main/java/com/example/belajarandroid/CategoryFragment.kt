@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.commit
 
 class CategoryFragment : Fragment(), View.OnClickListener {
     override fun onCreateView(
@@ -34,15 +35,26 @@ class CategoryFragment : Fragment(), View.OnClickListener {
             detailCategoryFragment.description = description
 
             val fragmentManager = parentFragmentManager
-            fragmentManager.beginTransaction().apply {
+////            !Fragment KTX
+//            fragmentManager.beginTransaction().apply {
+//                replace(
+//                    R.id.frame_container,
+//                    detailCategoryFragment,
+//                    DetailCategoryFragment::class.java.simpleName
+//                )
+//                addToBackStack(null)
+//                commit()
+
+//            Fragment KTX
+            fragmentManager.commit {
+                addToBackStack(null)
                 replace(
                     R.id.frame_container,
                     detailCategoryFragment,
                     DetailCategoryFragment::class.java.simpleName
                 )
-                addToBackStack(null)
-                commit()
             }
         }
     }
 }
+

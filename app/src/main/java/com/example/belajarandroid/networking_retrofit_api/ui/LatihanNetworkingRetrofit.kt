@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,12 +16,14 @@ import com.example.belajarandroid.networking_retrofit_api.data.response.Customer
 import com.example.belajarandroid.networking_retrofit_api.data.response.PostReviewResponse
 import com.example.belajarandroid.networking_retrofit_api.data.response.Restaurant
 import com.example.belajarandroid.networking_retrofit_api.data.response.RestaurantResponse
+import com.google.android.material.snackbar.Snackbar
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class LatihanNetworkingRetrofit : AppCompatActivity() {
     private lateinit var binding: ActivityLatihanNetworkingRetrofitBinding
+    private val mainViewModel by viewModels<MainViewModelRetrofitLiveData>()
 
     companion object {
         private const val TAG = "MainActivity"
@@ -39,10 +42,22 @@ class LatihanNetworkingRetrofit : AppCompatActivity() {
         val itemDecoration = DividerItemDecoration(this, layoutManager.orientation)
         binding.rvReview.addItemDecoration(itemDecoration)
 
-        findRestaurant()
+        mainViewModel.listReview.observe(this) { consumerReviews ->
+            setReviewData(consumerReviews)
+        }
+        mainViewModel.isLoading.observe(this) {
+            showLoading(it)
+        }
+
+        mainViewModel.snackbarText.observe(this) {
+            it.getContentIfNotHandled()?.let { message ->
+                Snackbar.make(window.decorView.rootView, message, Snackbar.LENGTH_SHORT).show()
+            }
+        }
+
 
         binding.btnSend.setOnClickListener { view ->
-            postReview(binding.edReview.text.toString())
+            mainViewModel.postReview(binding.edReview.text.toString())
             val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             imm.hideSoftInputFromWindow(view.windowToken, 0)
         }

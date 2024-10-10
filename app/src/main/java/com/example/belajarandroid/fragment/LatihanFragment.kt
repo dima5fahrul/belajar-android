@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.commit
 import com.example.belajarandroid.HomeFragment
 import com.example.belajarandroid.R
 
@@ -26,10 +27,20 @@ class LatihanFragment : AppCompatActivity() {
 
         if (fragment !is HomeFragment) {
             Log.d("MyFlexibleFragment", "Fragment Name :" + HomeFragment::class.java.simpleName)
-            fragmentManager
-                .beginTransaction()
-                .add(R.id.frame_container, homeFragment, HomeFragment::class.java.simpleName)
-                .commit()
+////            !Fragment KTX
+//            fragmentManager
+//                .beginTransaction()
+//                .add(R.id.frame_container, homeFragment, HomeFragment::class.java.simpleName)
+//                .commit()
+
+//            Fragment KTX
+            fragmentManager.commit {
+                add(
+                    R.id.frame_container,
+                    homeFragment,
+                    HomeFragment::class.java.simpleName
+                )
+            }
         }
     }
 }

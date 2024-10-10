@@ -1,5 +1,6 @@
 package com.example.belajarandroid
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -10,6 +11,7 @@ import com.example.belajarandroid.async_background_thread.LatihanAsynchronousBac
 import com.example.belajarandroid.fragment.LatihanFragment
 import com.example.belajarandroid.intent.LatihanIntent
 import com.example.belajarandroid.live_data.LatihanLiveData
+import com.example.belajarandroid.local_data_persistent.LatihanLocalDataPersistent
 import com.example.belajarandroid.navigation.LatihanNavigation
 import com.example.belajarandroid.networking_loopj_parsing_json.LatihanNetworkingLoopJParsingJSON
 import com.example.belajarandroid.networking_retrofit_api.ui.LatihanNetworkingRetrofit
@@ -18,6 +20,7 @@ import com.example.belajarandroid.view_model.LatihanViewModel
 import com.example.belajarandroid.views_and_view_group.LatihanViewsAndViewGroup
 
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -38,6 +41,8 @@ class MainActivity : AppCompatActivity() {
             findViewById(R.id.btn_move_latihan_networking_retrofit)
         val btnMoveLatihanViewModel: Button = findViewById(R.id.btn_move_latihan_view_model)
         val btnMoveLatihanLiveData: Button = findViewById(R.id.btn_move_latihan_live_data)
+        val btnMoveLatihanLocalDataPersistent: Button =
+            findViewById(R.id.btn_move_latihan_local_data_persistent)
 
         btnMoveLatihanActivity.setOnClickListener {
             startActivity(Intent(this@MainActivity, LatihanActivity::class.java))
@@ -86,6 +91,10 @@ class MainActivity : AppCompatActivity() {
 
         btnMoveLatihanLiveData.setOnClickListener {
             startActivity((Intent(this@MainActivity, LatihanLiveData::class.java)))
+        }
+
+        btnMoveLatihanLocalDataPersistent.setOnClickListener {
+            startActivity((Intent(this@MainActivity, LatihanLocalDataPersistent::class.java)))
         }
     }
 }
