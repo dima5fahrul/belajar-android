@@ -93,4 +93,11 @@
         android:layout_marginBottom="8dp"
         android:text="@string/local_data_persistent" />
 
+    <Button
+        android:id="@+id/btn_move_latihan_background_task_dan_scheduler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/background_task_dan_scheduler" />
+
 </LinearLayout>

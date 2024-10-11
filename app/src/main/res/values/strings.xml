@@ -232,4 +232,14 @@
     <string name="submit">Submit</string>
     <string name="delete">Delete</string>
     <string name="data_sqlite">Data SQLite</string>
+    <string name="repository_dan_injection">Repository dan Injection</string>
+    <string name="this_sms_receiver_app">This SMS Receiver App</string>
+    <string name="download_file">Download a File</string>
+    <string name="coming_from">Coming From</string>
+    <string name="this_play">Oii, main kesini jadi ngga? sekarang yak.</string>
+    <string name="check_sms_permission">Check SMS Permission</string>
+    <string name="incoming_message">Incoming Message</string>
+    <string name="from">from : %s</string>
+    <string name="background_task_dan_scheduler">Background Task dan Scheduler</string>
+    <string name="broadcast_receiver">Broadcast Receiver</string>
 </resources>

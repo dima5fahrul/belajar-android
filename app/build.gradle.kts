@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("com.google.devtools.ksp")
     id("kotlin-parcelize")
     id("androidx.navigation.safeargs")
 }
@@ -42,28 +43,43 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
-    implementation(libs.kotlinx.coroutines.core)
-    implementation(libs.kotlinx.coroutines.android)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.android.async.http)
-    implementation(libs.androidx.lifecycle.viewmodel.ktx)
-    implementation(libs.androidx.activity.ktx)
-    implementation(libs.androidx.lifecycle.livedata.ktx)
-    implementation(libs.glide)
-    implementation(libs.retrofit)
-    implementation(libs.converter.gson)
-    implementation(libs.logging.interceptor)
-    implementation(libs.androidx.preference)
-    implementation(libs.androidx.datastore.preferences)
-    implementation(libs.androidx.lifecycle.runtime.ktx.v286)
+    // Core Android and Kotlin components
+    implementation(libs.androidx.core.ktx) // Core Kotlin extensions for Android
+    implementation(libs.androidx.appcompat) // Support for backward compatibility with older Android versions
+    implementation(libs.androidx.activity) // Support for managing Android Activity
+    implementation(libs.androidx.activity.ktx) // Extensions for managing Android Activity with lifecycle awareness
+
+// UI components and layouts
+    implementation(libs.material) // Material Design components and styles
+    implementation(libs.androidx.constraintlayout) // ConstraintLayout for creating complex layouts with a flat view hierarchy
+    implementation(libs.glide) // Glide library for image loading and caching
+
+// Navigation components
+    implementation(libs.androidx.navigation.fragment.ktx) // Navigation component for fragment navigation
+    implementation(libs.androidx.navigation.ui.ktx) // Navigation UI component
+
+// Lifecycle and ViewModel components
+    implementation(libs.androidx.lifecycle.runtime.ktx) // Lifecycle components for managing UI-related data in a lifecycle-conscious way
+    implementation(libs.androidx.lifecycle.viewmodel.ktx) // ViewModel component for lifecycle-aware data management
+    implementation(libs.androidx.lifecycle.livedata.ktx) // LiveData component for lifecycle-aware observable data
+    implementation(libs.androidx.lifecycle.runtime.ktx.v286) // Runtime lifecycle components for backward compatibility
+
+// Asynchronous programming with Kotlin Coroutines
+    implementation(libs.kotlinx.coroutines.core) // Core Coroutines library
+    implementation(libs.kotlinx.coroutines.android) // Android-specific Coroutines support
+
+// Network operations
+    implementation(libs.android.async.http) // Async HTTP library for network operations
+    implementation(libs.retrofit) // Retrofit for making HTTP requests and handling API responses
+    implementation(libs.converter.gson) // GSON converter for converting JSON data to Kotlin/Java objects
+    implementation(libs.logging.interceptor) // Interceptor for logging network requests and responses
+
+// Data persistence
+    implementation(libs.androidx.preference) // Preferences for saving key-value pairs
+    implementation(libs.androidx.datastore.preferences) // DataStore for saving data asynchronously with coroutine support
+
+// Testing libraries
+    testImplementation(libs.junit) // JUnit framework for unit testing
+    androidTestImplementation(libs.androidx.junit) // AndroidX JUnit extensions for Android Instrumentation tests
+    androidTestImplementation(libs.androidx.espresso.core) // Espresso library for UI testing
 }

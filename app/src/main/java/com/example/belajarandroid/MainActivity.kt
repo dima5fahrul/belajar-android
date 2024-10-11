@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.belajarandroid.activity.LatihanActivity
 import com.example.belajarandroid.async_background_thread.LatihanAsynchronousBackgroundThread
+import com.example.belajarandroid.background_task_and_scheduler.BackgroundTaskAndSchedulerActivity
 import com.example.belajarandroid.fragment.LatihanFragment
 import com.example.belajarandroid.intent.LatihanIntent
 import com.example.belajarandroid.live_data.LatihanLiveData
@@ -43,6 +44,8 @@ class MainActivity : AppCompatActivity() {
         val btnMoveLatihanLiveData: Button = findViewById(R.id.btn_move_latihan_live_data)
         val btnMoveLatihanLocalDataPersistent: Button =
             findViewById(R.id.btn_move_latihan_local_data_persistent)
+        val btnMoveLatihanBackdroundTaskDanSchedulder: Button =
+            findViewById(R.id.btn_move_latihan_background_task_dan_scheduler)
 
         btnMoveLatihanActivity.setOnClickListener {
             startActivity(Intent(this@MainActivity, LatihanActivity::class.java))
@@ -95,6 +98,15 @@ class MainActivity : AppCompatActivity() {
 
         btnMoveLatihanLocalDataPersistent.setOnClickListener {
             startActivity((Intent(this@MainActivity, LatihanLocalDataPersistent::class.java)))
+        }
+
+        btnMoveLatihanBackdroundTaskDanSchedulder.setOnClickListener {
+            startActivity(
+                (Intent(
+                    this@MainActivity,
+                    BackgroundTaskAndSchedulerActivity::class.java
+                ))
+            )
         }
     }
 }
