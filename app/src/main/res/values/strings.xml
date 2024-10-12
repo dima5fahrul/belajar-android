@@ -36,7 +36,6 @@
         Video playback: up to 13 hours\n
         Audio playback (via headset): up to 110 hours\n
         Fast charging: up to 7 hours of use from only 15 minutes of charging</string>
-    <string name="title">Google Pixel</string>
     <string name="specification">Spesifikasi</string>
     <string name="display">Display</string>
     <string name="size">Size</string>
@@ -242,4 +241,21 @@
     <string name="from">from : %s</string>
     <string name="background_task_dan_scheduler">Background Task dan Scheduler</string>
     <string name="broadcast_receiver">Broadcast Receiver</string>
+    <string name="send_notif">Send Notif</string>
+    <string name="notification_title">Dicoding Indonesia</string>
+    <string name="notification_message">Mari belajar bersama</string>
+    <string name="notification_subtext">Reminder</string>
+    <string name="send_notification">Send Notification</string>
+    <string name="notification">Notification</string>
+    <string name="open_detail">Open Detail</string>
+    <string name="title">Title</string>
+    <string name="message">Message</string>
+    <string name="one_time_alarm">One Time Alarm</string>
+    <string name="alarm_date">Tanggal Alarm</string>
+    <string name="set_one_time_alarm">Set One Time Alarm</string>
+    <string name="alarm_message">Pesan Alarm</string>
+    <string name="repeating_alarm">Repeating Alarm</string>
+    <string name="set_repeating_alarm">Set Repeating Alarm</string>
+    <string name="cancel_alarm">Batalkan Alarm</string>
+    <string name="alarm_time">Waktu Alarm</string>
 </resources>

@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.belajarandroid.R
 import com.example.belajarandroid.background_task_and_scheduler.broadcast_receiver.BroadcastReceiverActivity
+import com.example.belajarandroid.background_task_and_scheduler.notification.NotificationBuilderDanNotificationManagerActivity
 
 class BackgroundTaskAndSchedulerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,5 +33,14 @@ class BackgroundTaskAndSchedulerActivity : AppCompatActivity() {
             )
         }
 
+        val btnMoveNotificationActivity: Button = findViewById(R.id.btn_move_notification)
+        btnMoveNotificationActivity.setOnClickListener {
+            startActivity(
+                Intent(
+                    this@BackgroundTaskAndSchedulerActivity,
+                    NotificationBuilderDanNotificationManagerActivity::class.java
+                )
+            )
+        }
     }
 }
