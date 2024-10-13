@@ -258,4 +258,5 @@
     <string name="set_repeating_alarm">Set Repeating Alarm</string>
     <string name="cancel_alarm">Batalkan Alarm</string>
     <string name="alarm_time">Waktu Alarm</string>
+    <string name="alarm_manager">Alarm Manager</string>
 </resources>

@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.belajarandroid.R
 import com.example.belajarandroid.background_task_and_scheduler.broadcast_receiver.BroadcastReceiverActivity
 import com.example.belajarandroid.background_task_and_scheduler.notification.NotificationBuilderDanNotificationManagerActivity
+import com.example.belajarandroid.background_task_and_scheduler.one_time_alarmmanager.OneTimeAlarmManagerActivity
 
 class BackgroundTaskAndSchedulerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,6 +40,16 @@ class BackgroundTaskAndSchedulerActivity : AppCompatActivity() {
                 Intent(
                     this@BackgroundTaskAndSchedulerActivity,
                     NotificationBuilderDanNotificationManagerActivity::class.java
+                )
+            )
+        }
+
+        val btnMoveOneTimeAlarmActivity: Button = findViewById(R.id.btn_move_alarm_manager)
+        btnMoveOneTimeAlarmActivity.setOnClickListener {
+            startActivity(
+                Intent(
+                    this@BackgroundTaskAndSchedulerActivity,
+                    OneTimeAlarmManagerActivity::class.java
                 )
             )
         }
